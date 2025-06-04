@@ -1,7 +1,16 @@
-$corDeFundo: #FCEBB6; // Fundo areia clara
-$corTexto: #3D2817; // Marrom escuro para textos
-$corPrimaria: #E67E22; // Laranja queimado
-$corSecundaria: #F39C12; // Dourado
-$corTerciaria: #8E44AD; // Roxo ameno, para contrastes
-$corNeutra: #F7DC6F; // Tons de amarelo claro para neutros
-$corEscura: #2C3E50;
+// Paleta de Cores Dragon Ball Z Revolution (Exemplo)
+$corDeFundo: #1a252f; // Azul bem escuro ou preto
+$corTexto: #f0f0f0; // Texto principal claro (branco/cinza claro)
+$corTextoSecundario: #a0a0a0; // Texto secundário (cinza)
+
+$corPrimaria: #ff6600; // Laranja vibrante (Gi do Goku)
+$corSecundaria: #007bff; // Azul (Detalhes, Ki, Vegeta)
+$corTerciaria: #ffd700; // Amarelo/Dourado (Super Saiyajin, destaques)
+
+$corNeutra: #343a40; // Um cinza escuro para cards, fundos de seção
+$corDestaqueHover: lighten($corPrimaria, 10%);
+$corBorda: #495057;
+
+// Fontes (Exemplo, você pode definir mais aqui)
+$fontePrincipal: "SaiyanSans", sans-serif; // Nome da fonte que você escolherá
+$fonteTitulos: "SaiyanSans", sans-serif; // Pode ser a mesma ou outra

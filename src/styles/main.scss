@@ -1,29 +1,23 @@
 @use "variaveis";
 
-// Definição da Nova Fonte (coloque o arquivo da fonte em assets/fonts/)
 @font-face {
-  font-family: "SaiyanSans"; // Mesmo nome usado em _variaveis.scss
-  src: url("../../assets/fonts/Saiyan-Sans.ttf") format("truetype"); // <<< MUDE AQUI para o nome do seu arquivo de fonte
+  font-family: "waltograph42";
+  src: url("../../assets/fonts/waltograph42.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: variaveis.$fontePrincipal; // Aplicando a nova fonte principal
+  font-family: "waltograph42", sans-serif; // Fonte personalizada como principal
   background-color: variaveis.$corDeFundo;
   color: variaveis.$corTexto;
   margin: 0;
   padding: 0;
-  line-height: 1.6; // Adicionado para melhor legibilidade
 }
 
 header {
-  background-color: darken(
-    variaveis.$corDeFundo,
-    5%
-  ); // Um pouco mais escuro que o fundo
-  color: variaveis.$corTexto; // Texto do header
-  padding: 10px 0; // Adicionado padding
+  background-color: variaveis.$corPrimaria;
+  color: variaveis.$corNeutra;
 
   nav {
     ul {
@@ -38,12 +32,11 @@ header {
 
         a {
           text-decoration: none;
-          color: variaveis.$corTexto;
-          font-size: 28px; // Ajuste o tamanho conforme sua fonte
-          font-family: variaveis.$fonteTitulos; // Fonte para links de navegação
+          color: variaveis.$corNeutra;
+          font-size: 32px;
 
           &:hover {
-            color: variaveis.$corPrimaria; // Cor de hover
+            color: variaveis.$corTexto;
           }
         }
       }
@@ -53,282 +46,136 @@ header {
 
 section.logo {
   text-align: center;
-  // Remova background-color se a imagem cobrir tudo, ou defina uma cor de fallback
-  // background-color: variaveis.$corSecundaria;
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
+  background-color: variaveis.$corSecundaria;
+  padding: 0; // Remove o padding para evitar bordas internas
+  margin: 0; // Remove margens
+  width: 100vw; // Ocupa toda a largura da tela
+  height: 100vh; // Ocupa toda a altura da viewport
 
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; // Imagem se ajusta à largura da seção
+    height: 100%; // Imagem se ajusta à altura da seção
+    object-fit: cover; // Mantém proporção enquanto cobre o espaço
   }
-
-  // Se quiser um título sobre a imagem:
-  // h1 {
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //     color: variaveis.$corTerciaria;
-  //     font-size: 5rem;
-  //     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-  // }
 }
 
-// Renomear .sinopse para .sobre-jogo ou similar se desejar
 .sinopse {
-  // Ou .sobre-jogo
-  margin: 20px auto; // Adicionado margin top/bottom
-  max-width: 80%; // Ajustado max-width
-  background-color: lighten(
-    variaveis.$corDeFundo,
-    5%
-  ); // Fundo um pouco mais claro
+  margin: 10px auto;
+  max-width: 90%;
+  background-color: variaveis.$corNeutra;
   border-radius: 8px;
-  padding: 20px;
-  border: 1px solid variaveis.$corBorda;
+  padding: 10px;
 
   h1,
   h2,
   h3 {
-    font-family: variaveis.$fonteTitulos;
+    font-family: "waltograph42", sans-serif; // Aplica a fonte personalizada nos títulos
     font-size: 40px;
     color: variaveis.$corPrimaria;
     text-align: center;
-    margin-bottom: 20px;
   }
 
   p {
-    color: variaveis.$corTextoSecundario;
-    font-size: 22px; // Ajuste conforme necessário
-    margin-bottom: 15px;
-    i b {
-      // Para o itálico e negrito no texto de exemplo
-      color: variaveis.$corTexto;
-    }
+    color: variaveis.$corEscura;
+    font-size: 28px;
   }
 }
 
-// Estilos para a seção de Personagens (revisar e adaptar)
 .personagens {
-  padding: 40px 20px; // Aumentado padding
+  padding: 20px;
 
   h1 {
     text-align: center;
     font-size: 3rem;
-    font-family: variaveis.$fonteTitulos;
-    color: variaveis.$corTerciaria; // Usando cor terciária para destaque
-    margin-bottom: 30px;
+    color: variaveis.$corPrimaria;
+    margin-bottom: 20px;
   }
 
   table {
     width: 100%;
-    border-collapse: separate; // Alterado para separate para usar border-spacing
-    border-spacing: 10px; // Espaço entre as células
+    border-collapse: collapse;
     text-align: center;
     margin: 0 auto;
   }
 
   td {
-    padding: 20px;
+    padding: 15px;
     vertical-align: top;
     background-color: variaveis.$corNeutra;
-    border: 2px solid variaveis.$corPrimaria;
+    border: 1px solid variaveis.$corPrimaria;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); // Adicionada sombra
   }
 
   img {
     width: 100%;
-    max-width: 180px; // Ajustado max-width
-    height: 180px; // Ajustado height
+    max-width: 150px; // Limita o tamanho das imagens
+    height: 150px; // Tamanho fixo para todas as imagens
     object-fit: cover;
-    border-radius: 8px; // Suavizado border-radius
-    margin-bottom: 15px;
-    border: 2px solid variaveis.$corSecundaria; // Borda na imagem
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
 
   h3 {
     font-size: 2rem;
-    font-family: variaveis.$fonteTitulos;
-    color: variaveis.$corPrimaria; // Cor para o nome do personagem
+    color: variaveis.$corTexto;
     margin: 10px 0;
   }
 
   p {
-    font-size: 1.1rem; // Ajustado
-    line-height: 1.5;
-    color: variaveis.$corTexto; // Texto dentro do card
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: variaveis.$corEscura;
   }
 }
 
-// ... (Mantenha e ajuste as media queries para .personagens) ...
+// Responsividade para Personagens
+@media (max-width: 768px) {
+  .personagens table {
+    font-size: 0.9rem; // Reduz o tamanho da fonte para melhor exibição
+  }
 
-// Estilos para Seção Trailer/Galeria (revisar e adaptar)
+  .personagens img {
+    max-width: 120px; // Ajusta as imagens para telas menores
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .personagens table {
+    font-size: 0.8rem;
+  }
+
+  .personagens img {
+    max-width: 100px;
+    height: 100px;
+  }
+
+  .personagens td {
+    padding: 10px; // Reduz o espaçamento interno
+  }
+}
 .trailer {
-  // ou .galeria
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 0; // Adicionado padding vertical
-  margin: 0;
-  width: 100vw;
-  min-height: 80vh; // Altura mínima
-  background-color: darken(variaveis.$corDeFundo, 3%);
+  display: flex; // Usar flexbox para centralizar o conteúdo
+  align-items: center; // Centralizar verticalmente
+  justify-content: center; // Centralizar horizontalmente
+  padding: 0; // Remove o padding
+  margin: 0; // Remove margens
+  width: 100vw; // Ocupa toda a largura da tela
+  height: 100vh; // Ocupa toda a altura da viewport
+  background-color: variaveis.$corSecundaria; // Define uma cor de fundo (opcional)
 
   iframe {
-    width: 80%;
-    height: 45vw; // Proporcional à largura
-    max-width: 900px;
-    max-height: 506px;
-    border: 3px solid variaveis.$corTerciaria; // Borda temática
-    border-radius: 8px;
-  }
-  // Adicione estilos para .galeria-imagens se for usar
-}
-
-// --- NOVOS ESTILOS PARA SEÇÕES ADICIONADAS ---
-.noticias {
-  padding: 40px 20px;
-  background-color: lighten(variaveis.$corDeFundo, 3%);
-
-  h1 {
-    text-align: center;
-    font-family: variaveis.$fonteTitulos;
-    color: variaveis.$corTerciaria;
-    margin-bottom: 30px;
-    font-size: 2.8rem;
-  }
-
-  .noticia-item {
-    background-color: variaveis.$corNeutra;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border-left: 5px solid variaveis.$corPrimaria;
-
-    h2 {
-      color: variaveis.$corPrimaria;
-      font-family: variaveis.$fonteTitulos;
-      margin-top: 0;
-    }
-    .data-noticia {
-      font-size: 0.9em;
-      color: variaveis.$corTextoSecundario;
-      margin-bottom: 10px;
-    }
-    p {
-      color: variaveis.$corTexto; // Texto dentro do card de notícia
-    }
-    a {
-      color: variaveis.$corSecundaria;
-      text-decoration: none;
-      font-weight: bold;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-.downloads {
-  padding: 40px 20px;
-  text-align: center;
-
-  h1 {
-    font-family: variaveis.$fonteTitulos;
-    color: variaveis.$corTerciaria;
-    margin-bottom: 30px;
-    font-size: 2.8rem;
-  }
-
-  .download-item {
-    background-color: variaveis.$corNeutra;
-    padding: 25px;
-    margin: 20px auto;
-    border-radius: 8px;
-    max-width: 600px;
-    border: 1px solid variaveis.$corBorda;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-    h3 {
-      color: variaveis.$corPrimaria;
-      margin-top: 0;
-    }
-    p {
-      color: variaveis.$corTexto; // Texto dentro do card de download
-      margin-bottom: 10px;
-    }
-    .download-info {
-      font-size: 0.9em;
-      color: variaveis.$corTextoSecundario;
-    }
-    .btn-download {
-      display: inline-block;
-      background-color: variaveis.$corSecundaria;
-      color: variaveis.$corDeFundo; // Ou um texto bem contrastante
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      font-family: variaveis.$fonteTitulos;
-      margin-top: 15px;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: lighten(variaveis.$corSecundaria, 10%);
-      }
-    }
-  }
-}
-
-.comunidade {
-  padding: 40px 20px;
-  background-color: lighten(variaveis.$corDeFundo, 3%);
-  text-align: center;
-
-  h1 {
-    font-family: variaveis.$fonteTitulos;
-    color: variaveis.$corTerciaria;
-    margin-bottom: 20px;
-    font-size: 2.8rem;
-  }
-  p {
-    margin-bottom: 25px;
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    li {
-      margin-bottom: 10px;
-      a {
-        color: variaveis.$corPrimaria;
-        font-size: 1.5rem;
-        text-decoration: none;
-        font-family: variaveis.$fonteTitulos;
-        &:hover {
-          color: variaveis.$corDestaqueHover;
-          text-decoration: underline;
-        }
-      }
-    }
+    width: 80%; // O vídeo ocupará 80% da largura da seção
+    height: 80%; // O vídeo ocupará 80% da altura da seção
+    max-width: 1200px; // Define um limite máximo para largura
+    max-height: 675px; // Define um limite máximo para altura
+    border: none; // Remove bordas do iframe
   }
 }
 
 footer {
-  background-color: darken(variaveis.$corDeFundo, 10%); // Mais escuro
-  color: variaveis.$corTextoSecundario; // Texto do footer
+  background-color: variaveis.$corTerciaria;
+  color: variaveis.$corNeutra;
   text-align: center;
-  padding: 20px; // Aumentado padding
-  font-size: 0.9rem;
-  p {
-    margin: 5px 0;
-  }
+  padding: 10px;
 }

@@ -40,7 +40,7 @@ Você precisa ter o [Node.js](https://nodejs.org/en/) (que inclui o `npm`) insta
 
 1.  Clone o repositório:
     ```sh
-    git clone [https://github.com/SEU_USUARIO/rei-leao-ebac.git](https://github.com/SEU_USUARIO/rei-leao-ebac.git)
+    git clone https://github.com/josezaltar/Rei-Leao-Ebac.git
     ```
 2.  Navegue até o diretório do projeto:
     ```sh

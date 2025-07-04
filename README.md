@@ -4,7 +4,8 @@ Bem-vindo ao repositório da landing page temática do filme **O Rei Leão**. Es
 
 **[➡️ Acesse o site do projeto aqui! ⬅️](https://rei-leao-ebac.vercel.app/)**
 
-![O Rei Leão](https://i.imgur.com/yV8n4Zc.png)
+![O Rei Leão](https://i.imgur.com/cq1Hwmc.png)
+![O Rei Leão](https://i.imgur.com/4WUlU7T.png)
 
 ## 📖 Sobre o Projeto
 
